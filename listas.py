@@ -158,8 +158,110 @@ mi_otra_lista.sort()
 print(mi_otra_lista)
 """
 
-
-#si quieres saber el index de un objeto que sabes que esta dentro de una lista puedes usar el metodo index y pasrle el objeto como parametro
+"""
+#si quieres saber el index de un objeto que sabes que esta dentro de una lista puedes usar el metodo index y pasrle el objeto como parametro; tambien podemos buscar un elemento especificando que se omita cierta cantidad de elementos
 mi_lista = ["hola", "mundo", "como", "estas"]
 print(mi_lista.index("como"))
 print(mi_lista.index("como", 1))
+"""
+
+"""
+#el metodo clear elimina todos los elementos de una lista
+mi_lista = ["hola", "mundo", "como", "estas"]
+mi_lista.clear()
+print(mi_lista)
+"""
+
+"""
+#el metodo 'copy' copia todos los elementos de una lista
+mi_lista = ["hola", "mundo", "como", "estas"]
+nueva_lista = mi_lista.copy()
+print(nueva_lista)
+"""
+
+"""
+  -------------------
+//LIST COMPPREHENSION//
+  -------------------
+"""
+# es una forma avanzada de crear listas con menos codigo y mayor legibilidad
+
+"""
+#esta lista agrega numeros del 1 al 5 y los eleva al cuadrado
+mi_lista = [x**2 for x in range(1, 6)]
+print(mi_lista)
+#el codigo de arriba reemplaza el codigo de abajo
+mi_lista = []
+for x in range (1, 6):
+  mi_lista.append(x**2)
+"""
+
+# PUEDES AGREGAR CONDICIONALES EN LAS LIST COMPREHESION
+
+"""
+# esta lista agrega solo numeros pares en un rango de 1 a 11
+mi_lista = [x for x in range(1, 11) if x % 2 == 0]
+print(mi_lista)
+# el codigo de arriba reemplaza:
+mi_lista = []
+for x in range(1, 11):
+  if x % 2 == 0:
+    mi_lista.append(x)
+"""
+
+"""
+#esta lista agrega numeros pares y reemplaza los numeros impares por la palabra 'impar'
+mi_lista = [x if x % 2 == 0 else "impar" for x in range(1, 10)]
+print(mi_lista)
+#el codigo de arriba reemplaza:
+mi_lista = []
+for x in range(1, 10):
+  if x % 2 == 0:
+    mi_lista.append(x)
+  else:
+    mi_lista.append("impar")
+"""
+
+#SE PUEDE USAR MULTIPLES BUCLES EN LAS LIST COMPREHESION
+
+"""
+#esta lista agrega pares (x, y) donde 'x' acepta valores del 1 al 3 y donde 'y' acepta cada letra del texto
+mi_lista = [(x, y) for x in range(1, 4) for y in "abc"]
+print(mi_lista)
+#el codigo de arriba reemplaza:
+mi_lista = []
+for x in range(1, 4):
+  for y in "abc":
+    mi_lista.append((x, y))
+"""
+
+#PUEDES LLAMAR FUNCIONES DENTRO DE LAS LIST COMPREHESION
+
+"""
+#la segunda lista obtiene los elementos de la primera lista y reemplaza cada letra por sus mayusculas
+nombres = ["jose", "juan", "ana", "alison"]
+mayusculas = [nombre.upper() for nombre in nombres]
+print(mayusculas)
+#el codigo de arriba reemplaza:
+nombres = ["jose", "juan", "ana", "alison"]
+mayusculas = []
+for nombre in nombres:
+  mayusculas.append(nombre.upper())
+"""
+
+#SE PUEDE COMBINAR 2 LIStas EN UNA USANDO METODOS Y TAMBIEN SE PUEDEN ENUMERARLAS
+
+"""
+#la lista 'combinacion' agrega pares (edad, valor) como elementos de su lista
+nombres = ["jose", "juan", "ana", "alison"]
+edades = [23, 32, 21, 19]
+combinacion = [(nombre, edad) for nombre,edad in zip(nombres, edades)]
+print(combinacion)
+"""
+
+"""
+#la lista enumerar agrega elementos en pares (i, nombre) donde 'i' enumara la posicion del elemento en la lista y 'nombre' obtiene los elementos de la lista anterior
+nombres = ["jose", "juan", "ana", "alison"]
+enumerar = [(i, nombre) for i, nombre in enumerate(nombres)]
+print(enumerar)
+"""
