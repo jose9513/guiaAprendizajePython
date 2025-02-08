@@ -100,3 +100,25 @@ mi_diccionario = {
 for x, y in mi_diccionario.items():
   print(f"{x} : {y}")
 """
+
+"""
+  ---------------------
+//DICCIONARIOS ANIDADOS//
+  ---------------------
+"""
+
+
+
+dic_1 = {
+  "numero" : 1,
+  "letra" : "a"
+}
+dic_2 = {
+  "numero" : 2,
+  "letra" : "b"
+}
+d = {
+  "anidado1" : dic_1,
+  "anidado2" : dic_2
+}
+print(d)
