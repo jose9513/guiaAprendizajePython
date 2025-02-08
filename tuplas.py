@@ -57,8 +57,28 @@ a, b, c, d, e = mi_tupla
 print(a, b, c, d, e)
 """
 
-
-
+"""
+#se puede crear una tupla de un solo elemento (aun que no sirva mucho a nivel practico) es necesario poner una coma al costado del elemento por que si no se considerara como una variable en vez de una tupla
 mi_tupla = (1,)
 print(type(mi_tupla))
 print(mi_tupla)
+"""
+
+"""
+  ---------------------
+//METODOS DE LAS TUPLAS//
+  ---------------------
+"""
+
+"""
+#el metodo 'count' cuenta cuantas veces aparece el valor ingresado dentro de la tupla
+mi_tupla = (1, 1, 1, 1, 2, 3, 4, 5)
+print(mi_tupla.count(1))
+"""
+
+"""
+#el metodo 'index' busca el valor ingresado dentro de la tupla y devuelve la posicion en la que se encontro, en caso de no encontrarlo devuelve un error
+mi_tupla = (1, 1, 1, 1, 2, 3, 4, 5)
+print(mi_tupla.index(4))
+print(mi_tupla.index(44))
+"""

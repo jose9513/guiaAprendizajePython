@@ -206,8 +206,8 @@ mi_diccionario.popitem()
 print(mi_diccionario)
 """
 
-
-#el metodo 'update' recibe como parametro otro diccionario y agrega los elementos que no esten en el primer diccionario
+"""
+#el metodo 'update' recibe como parametro otro diccionario y agrega los elementos que no esten en el primer diccionario (si las keys no son iguales las agrega)
 dic_1 = {
   "numero" : 1,
   "letra" : "a"
@@ -219,3 +219,4 @@ dic_2 = {
 }
 dic_1.update(dic_2)
 print(dic_1)
+"""
