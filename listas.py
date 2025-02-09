@@ -140,9 +140,11 @@ print(mi_lista)
 """
 
 """
-#el metodo reverse invierte el orden de la lista
+#el metodo reverse invierte el orden de la lista, tambien se puede usar [::-1] para invertir la lista
 mi_lista = ["hola", "mundo", "como", "estas"]
 mi_lista.reverse()
+print(mi_lista)
+mi_lista[::-1]
 print(mi_lista)
 """
 
