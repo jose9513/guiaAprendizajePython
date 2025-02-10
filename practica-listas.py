@@ -168,3 +168,72 @@ mi_lista = ["hola", "mundo", "como", "estas"]
 nueva_lista = [len(elemento) for elemento in mi_lista]
 print(nueva_lista)
 """
+
+"""
+#dada una lista de 'n' numeros, divide la lista en 2 listas, una de pares y otra de impares
+
+
+lista = [2, 7, 14, 23, 34, 45, 52, 61, 78, 89]
+
+lista_pares = [x for x in lista if x % 2 == 0]
+lista_impares = [y for y in lista if y % 2 != 0]
+print(f"{lista_pares} \n {lista_impares}")
+"""
+
+"""
+#encuentra los elementos comunes entre 2 listas
+
+def elementos_iguales(lista1, lista2):
+    iguales = []
+    for elemento1 in lista1:
+        for elemento2 in lista2:
+            if elemento2 == elemento1:
+                iguales.append(elemento2)
+                
+    return iguales
+
+lista1 = [1, 2, 3, 4, 5]
+lista2 = [3, 4, 5, 6, 7]
+
+print(elementos_iguales(lista1, lista2))
+
+numeros_iguales = [elemento for elemento in lista1 for elemento2 in lista2 if elemento == elemento2]
+print(numeros_iguales)
+"""
+
+"""
+#dada una lista de numeros encuentra el segundo numero mas grande sin elminar ningun numero
+
+lista = [2, 7, 14, 23, 34, 45, 52, 61, 78, 89]
+
+def segundo_mas_grande(lista):
+    mas_grande = max(lista)
+    return max(i for i in lista if i <mas_grande)
+    
+print(segundo_mas_grande(lista))
+"""
+
+"""
+#dada una lista de listas, ordena las sublistas segun la suma de sus elementos
+
+lista_de_listas = [
+    [42, 7, 56, 23, 91],
+    [5, 38, 77, 16, 62],
+    [84, 9, 14, 99, 45],
+    [21, 70, 13, 35, 60],
+    [88, 19, 33, 48, 72]
+]
+
+lista_ordenada = sorted(lista_de_listas, key=sum)
+print(lista_ordenada)
+"""
+
+"""
+#dada 2 listas, crea una nueva lista alternando los elementos de las 2 listas anteriores
+
+lista1 = [1, 3, 5]
+lista2 = [2, 4, 6]
+
+nueva_lista = [elemento for par in zip(lista1, lista2) for elemento in par]
+print(nueva_lista)
+"""

@@ -158,6 +158,10 @@ print(mi_lista)
 mi_otra_lista = ["hola", "mundo", "como", "estas"]
 mi_otra_lista.sort()
 print(mi_otra_lista)
+
+#el metodo 'sorted' crea una nueva lista ordenando la anterior segun el requerimiento que deseas
+nueva_lista = sorted(mi_lista, key > 4, reverse=False)
+print(nueva_lista)
 """
 
 """
